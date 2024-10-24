@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Cyberchain - Easy</title>
+  </head>
+  <body>
+    <p>Tax Calculator !</p>
+    <div>
+      <input type="text" placeholder="Enter Numerical Value">
+      <button onclick="
+        calculateTax(0.1);
+      ">Type 1 - 10%</button>
+      <button onclick="
+        calculateTax(0.2);
+      ">Type 2 - 20%</button>
+      <button onclick="
+        calculateTax(0.3);
+      ">Type 3 - 30%</button>
+      <button onclick="
+        calculateTax(0.4);
+      ">Type 3 - 40%</button>
+      <div class="output"></div>
+    </div>
+    <script>
+      function calculateTax(taxPercent){
+        const inputByUser = Number(document.querySelector('input').value);
+        document.querySelector('.output').innerHTML = `Total:${inputByUser+inputByUser*taxPercent} Tax:${inputByUser*taxPercent}`
+      }
+    </script>
+  </body>
+</html>
